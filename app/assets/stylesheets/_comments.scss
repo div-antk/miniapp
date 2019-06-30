@@ -1,0 +1,70 @@
+.header {
+  height: 80px;
+  width: 100vw;
+  background-color: orange;
+  box-sizing: border-box;
+  padding: 20px;
+    &__box-img {
+      height: 40px;
+      width: 120px;
+      float: left;
+    }
+    &__box-logout {
+      height: 40px;
+      width: 120px;
+      float:right;
+    }
+}
+
+.main {
+  background-color: yellow;
+  height: 100vh;
+  padding-top: 20px;
+    &__box {
+      height: 600px;
+      width: 900px;
+      margin: auto;
+      display: flex;
+    }
+      &__box-img {
+        float: left;
+      }
+      &__box-right {
+        background-color: white;
+        border-left: 1px solid #efefef;
+        height: 100%;
+        width: 100%;
+        float: left;
+        // overflow: scroll;
+      }
+      &__box-right-love {
+        background-color: burlywood;
+        height: 60px;
+        width: 100%;
+        float: left;
+      }
+      &__box-right-user {
+        background-color: white;
+        float: left;
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+        // justify-content: space-between;
+      }
+        &__box-right-user-name {
+          font-weight: bold;
+          float: left;
+        }
+        &__box-right-user-delete {
+          float: right;
+        }
+        &__box-right-user-edit {
+          float: right;
+        }
+      &__box-right-comment {
+        height: 40px;
+        padding: 12px;
+        box-sizing: border-box;
+      }
+
+}
