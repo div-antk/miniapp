@@ -18,53 +18,59 @@
 
 .main {
   background-color: yellow;
-  height: 100vh;
+  height: calc(100vh - 80px);
   padding-top: 20px;
+  box-sizing: border-box;
     &__box {
       height: 600px;
       width: 900px;
       margin: auto;
       display: flex;
     }
-      &__box-img {
+      .img {
         float: left;
       }
-      &__box-right {
+      .right-box {
         background-color: white;
         border-left: 1px solid #efefef;
         height: 100%;
         width: 100%;
         float: left;
-        // overflow: scroll;
       }
-      &__box-right-love {
+      .right-box__logo {
         background-color: burlywood;
         height: 60px;
         width: 100%;
         float: left;
-      }
-      &__box-right-user {
+        }
+      .right-box__comments {
         background-color: white;
-        float: left;
+        height: calc(100% - 60px);
         width: 100%;
+        float: left;
         padding: 12px;
+        // display: flex;
         box-sizing: border-box;
-        // justify-content: space-between;
+        overflow: scroll;
+          .text {
+          margin-bottom: 12px;
+          }
+          .user {
+            display: flex;
+            margin-bottom: 40px;
+            // justify-content: space-between;
+            // &__name {
+            // font-weight: bold;
+            // float: left;
+            // }
+            &__edit {
+            // float: right;
+            margin-right: 20px;
+            }
+            &__delete {
+            // float: right;
+            
+          }
       }
-        &__box-right-user-name {
-          font-weight: bold;
-          float: left;
-        }
-        &__box-right-user-delete {
-          float: right;
-        }
-        &__box-right-user-edit {
-          float: right;
-        }
-      &__box-right-comment {
-        height: 40px;
-        padding: 12px;
-        box-sizing: border-box;
-      }
-
-}
+    }
+  }

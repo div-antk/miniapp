@@ -7,23 +7,24 @@
     .header
       .header__box
         .header__box-img
-          タイトル画像
+          -# - if current_user?
+          ドーモ。#{current_user.name}サン
         .header__box-logout
-          ログアウト
-
+          = link_to "ログアウト", "/users/sign_out", method: :delete
     .main
       .main__box
-        .main__box-img
+        .img
           =image_tag "uzeb.jpg", size: "600x600"
-        .main__box-right
-          .main__box-right-love
-            いいね
-          .main__box-right-user
-            .main__box-right-user-name
-              ぼく
-            .main__box-right-user-delete
-              消す
-            .main__box-right-user-edit
-              編集
-          .main__box-right-comment
-            ( ´∀｀)
+        .right-box
+          .right-box__logo
+            ロゴ
+          .right-box__comments
+            .text
+              ぼくは体を起こして、その遠い、知る由もない世界に思いを馳せた。そしてぼくはギャツビーのことを考えた。ギャツビーは、デイジーの屋敷の桟橋の先端にあった緑色の光をはじめて見つけたとき、どれほど胸を高鳴らせただろう。長い旅路を経てこの青い芝生にやってきたかれには、自分の夢がつかみそこないようのないほど近くにあるように思えたに違いない。かれは、それがとうに過去のものになったことを知らなかった。それがあるべきところは、あの都市が茫漠として形もなかったいつかのどこか、この共和国がいまだ夜の帳の下にうねり広がっていたころの闇深き原野だったのだ。ギャツビーは信じていた。あの緑色の光を、年々ぼくらから遠ざかっていく、うっとりするような未来を。あのときはぼくらの手をすりぬけていったけれど、大丈夫――明日のぼくらはもっと速く走り、もっと遠くまで腕を伸ばす……そしていつかきっと夜明けの光を浴びながら――だからぼくらは流れにさからい、止むことなく過去へと押し流されながらも、力をふりしぼり、漕いでゆく。
+            .user
+              -# .user__name
+              -#   = current_user.name
+              .user__edit
+                編集
+              .user__delete
+                消す
