@@ -1,0 +1,14 @@
+-# = form_for @comment, :url => {:action => 'update'} do |f|
+.header
+.main
+  .main__box
+    .filter-img
+      =image_tag "zx.jpg", size: "600x600"
+    .right-box
+      .right-box__info
+      .right-box__input
+        .post
+          .post__box
+            = form_for @comment, :url => {:action => 'update'} do |f|
+              = f.text_area :text
+              = f.submit "更新"

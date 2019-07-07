@@ -1,23 +1,39 @@
 .header {
   height: 80px;
   width: 100vw;
-  background-color: orange;
+  background-color: #1d1d1d;
   box-sizing: border-box;
   padding: 20px;
     &__box-img {
       height: 40px;
-      width: 120px;
+      width: 200px;
       float: left;
+      color: white;
+      line-height: 40px;
+      margin-left: 40px;
+    }
+    &__box-post {
+      height: 40px;
+      width: 120px;
+      float:right;
+      color: white;
+      font-weight: bold;
+      line-height: 40px;
     }
     &__box-logout {
       height: 40px;
       width: 120px;
       float:right;
+      font-weight: bold;
+      line-height: 40px;
     }
 }
 
+.header a {
+  color: white;
+}
+
 .main {
-  background-color: yellow;
   height: calc(100vh - 80px);
   padding-top: 20px;
   box-sizing: border-box;
@@ -26,6 +42,7 @@
       width: 900px;
       margin: auto;
       display: flex;
+      box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
     }
       .img {
         float: left;
@@ -37,19 +54,26 @@
         width: 100%;
         float: left;
       }
-      .right-box__logo {
-        background-color: burlywood;
+      .right-box__info {
+        background-color: grey;
         height: 60px;
         width: 100%;
         float: left;
+        text-align: center;
+        .info-time {
+          padding-top: 8px;
+          font-weight: bold;
+        .info-page {
+          text-align: center;
         }
+      }
+    }
       .right-box__comments {
         background-color: white;
         height: calc(100% - 60px);
         width: 100%;
         float: left;
         padding: 12px;
-        // display: flex;
         box-sizing: border-box;
         overflow: scroll;
           .text {
@@ -57,12 +81,8 @@
           }
           .user {
             display: flex;
-            margin-bottom: 40px;
-            // justify-content: space-between;
-            // &__name {
-            // font-weight: bold;
-            // float: left;
-            // }
+            // margin-bottom: 40px;
+            margin: 40px 0;
             &__edit {
             // float: right;
             margin-right: 20px;

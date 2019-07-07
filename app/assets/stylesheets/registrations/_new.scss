@@ -1,18 +1,13 @@
-.body {
-  height: 100vh;
-  background-color: bisque;
-}
-
-.wrapper {
-  background-color: salmon;
-  height: 400px;
-  width: 600px;
-  padding: 40px;
+.right-box__input {
+  background-color: white;
+  height: calc(100% - 60px);
+  width: 100%;
+  float: left;
+  padding: 4px;
   box-sizing: border-box;
-  margin: 80px;
+  overflow: scroll;
 }
 
-.sign-up {
-  font-weight: bold;
-  margin-bottom: 20px;
+.filter-img {
+  filter: opacity(50%);
 }

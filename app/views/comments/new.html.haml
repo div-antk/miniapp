@@ -1,0 +1,14 @@
+.header
+.main
+  .main__box
+    .filter-img
+      =image_tag "zx.jpg", size: "600x600"
+    .right-box
+      .right-box__info
+      .right-box__input
+        .post
+          .post__box
+            = form_for @comment do |f|
+              -# = f.label :text
+              = f.text_area :text
+              = f.submit "提交"

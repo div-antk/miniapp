@@ -1,0 +1,20 @@
+.main__box
+  .img
+    =image_tag "zx.jpg", size: "600x600"
+  .right-box
+    .right-box__info
+      .info-time
+        = comment.created_at.strftime('%Y年%m月%d日')
+      .info-page
+        = paginate(@comments)
+    .right-box__comments
+      .text
+        = simple_format(@comments[0]['text'])
+        - if user_signed_in? && current_user.id == comment.user_id
+          .user
+            -# .user__name
+            -#   = current_user.name
+            .user__edit
+              = link_to '编辑', "/comments/#{comment.id}/edit", method: :get
+            .user__delete
+              = link_to '删除', "/comments/#{comment.id}", method: :delete, data: { confirm: "削除しますか？" }
